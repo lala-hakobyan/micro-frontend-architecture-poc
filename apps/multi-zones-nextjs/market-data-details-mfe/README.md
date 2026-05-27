@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Market Data Details MFE: Fintech App
 
-## Getting Started
+A micro-frontend representing the market data asset detail page in the fintech platform.
+Follows **Next.js Multi-Zones Micro-frontend Architecture**.
 
-First, run the development server:
+## Compatibility
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project is compatible with the following technology versions:
+- **Next.js**: `v16.2.5`
+- **React**: `v19.2.4`
+- **Node.js**: `v20+`   
+  This project was tested with **Node.js** `v22.17.0`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Add this line to your hosts file:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```text
+    127.0.0.1       market-data-details.local-fintech.com
+    ```
 
-## Learn More
+2. Run the development server:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm run dev
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Open the MFE in the browser:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   Open one of the following URLs to see the result in the browser:
+    - If you didn't configure a custom hostname, use: [http://localhost:5004/market-data/ASSET_CODE](http://localhost:5004/market-data/aapl)   
+      Example: http://localhost:5004/market-data/aapl
+    - If you configured a custom hostname, use: [http://market-data-details.local-fintech.com:5004/market-data/ASSET_CODE](http://market-data-details.local-fintech.com:5004/market-data/aapl)   
+      Example: http://market-data-details.local-fintech.com:5004/market-data/aapl
+    - If you have the shell running, use: [http://shell.local-fintech.com:5000/market-data/ASSET_CODE](http://shell.local-fintech.com:5000/market-data/aapl)  
+      Example: http://shell.local-fintech.com:5000/market-data/aapl
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**ASSET_CODE** is the code of the asset, which can be found under the `id` key in the [src/app/data/asset-details.json](./src/app/data/asset-details.json) file.

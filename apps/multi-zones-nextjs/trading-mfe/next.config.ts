@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ['local-mfe.trading.com'],
+  allowedDevOrigins: ['local-mfe.trading.com', 'shell.local-fintech.com'],
   basePath: '/trading',
-  /* config options here */
   reactCompiler: true,
 };
 

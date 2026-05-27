@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ['local-mfe.market-data-details.com'],
+  allowedDevOrigins: ['market-data-details.local-fintech.com', 'shell.local-fintech.com'],
   basePath: '/market-data',
-  assetPrefix: '/market-data',
-  /* config options here */
+  assetPrefix: '/market-data-details',
   reactCompiler: true,
 };
 

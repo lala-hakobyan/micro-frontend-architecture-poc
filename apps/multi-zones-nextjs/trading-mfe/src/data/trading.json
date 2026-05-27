@@ -1,0 +1,22 @@
+{
+  "id": "btc-usd",
+  "symbol": "BTC",
+  "baseCurrency": "USD",
+  "name": "Bitcoin Core",
+  "assetClass": "Crypto",
+  "currentPrice": 64230.50,
+  "change24h": 4.15,
+  "stats": {
+    "high24h": 65100.00,
+    "low24h": 61950.00,
+    "volume24h": "31.4K BTC",
+    "networkFeeEst": 2.45
+  },
+  "chartData": [
+    {"time": "00:00", "price": 62000},
+    {"time": "06:00", "price": 61500},
+    {"time": "12:00", "price": 63200},
+    {"time": "18:00", "price": 65100},
+    {"time": "Now", "price": 64230.50}
+  ]
+}

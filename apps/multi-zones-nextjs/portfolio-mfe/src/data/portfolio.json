@@ -1,0 +1,32 @@
+[
+  {
+    "id": "aapl",
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "assetClass": "Stock",
+    "sharesOwned": 15.0,
+    "avgBuyPrice": 170.50,
+    "currentPrice": 189.43,
+    "change24h": 1.24
+  },
+  {
+    "id": "btc-usd",
+    "symbol": "BTC",
+    "name": "Bitcoin",
+    "assetClass": "Crypto",
+    "sharesOwned": 0.45,
+    "avgBuyPrice": 58000.00,
+    "currentPrice": 64230.50,
+    "change24h": -0.85
+  },
+  {
+    "id": "nvda",
+    "symbol": "NVDA",
+    "name": "NVIDIA Corp.",
+    "assetClass": "Stock",
+    "sharesOwned": 8.0,
+    "avgBuyPrice": 520.00,
+    "currentPrice": 880.08,
+    "change24h": 4.15
+  }
+]

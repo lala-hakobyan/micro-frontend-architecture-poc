@@ -1,0 +1,70 @@
+[
+  {
+    "id": "btc-usd",
+    "symbol": "BTC",
+    "name": "Bitcoin",
+    "assetClass": "Crypto",
+    "price": 64230.50,
+    "change24h": -0.85,
+    "description": "Bitcoin is a decentralized cryptocurrency originally described in a 2008 whitepaper. It is a peer-to-peer online currency, meaning that all transactions happen directly between equal, independent network participants without the need for an intermediary.",
+    "stats": [
+      { "label": "Market Cap", "value": "$1.2T" },
+      { "label": "Volume (24h)", "value": "$31.4B" },
+      { "label": "Circulating Supply", "value": "19.6M BTC" },
+      { "label": "All-Time High", "value": "$73,750.00" },
+      { "label": "Network Hashrate", "value": "580 EH/s" },
+      { "label": "Dominance", "value": "52.4%" }
+    ]
+  },
+  {
+    "id": "aapl",
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "assetClass": "Stock",
+    "price": 189.43,
+    "change24h": 1.24,
+    "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. It is one of the largest technology companies by revenue and market capitalization.",
+    "stats": [
+      { "label": "Market Cap", "value": "$2.9T" },
+      { "label": "Volume", "value": "54.2M" },
+      { "label": "P/E Ratio", "value": "28.5" },
+      { "label": "Dividend Yield", "value": "0.53%" },
+      { "label": "52-Week High", "value": "$199.62" },
+      { "label": "52-Week Low", "value": "$165.67" }
+    ]
+  },
+  {
+    "id": "tsla",
+    "symbol": "TSLA",
+    "name": "Tesla, Inc.",
+    "assetClass": "Stock",
+    "price": 175.22,
+    "change24h": -2.10,
+    "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, energy generation, and storage systems in the United States, China, and internationally. The company is a major player in the transition to sustainable energy.",
+    "stats": [
+      { "label": "Market Cap", "value": "$550.4B" },
+      { "label": "Volume", "value": "82.1M" },
+      { "label": "P/E Ratio", "value": "42.8" },
+      { "label": "Dividend Yield", "value": "N/A" },
+      { "label": "52-Week High", "value": "$299.29" },
+      { "label": "52-Week Low", "value": "$152.37" }
+    ]
+  },
+  {
+    "id": "nvda",
+    "symbol": "NVDA",
+    "name": "NVIDIA Corp.",
+    "assetClass": "Stock",
+    "price": 880.08,
+    "change24h": 4.15,
+    "description": "NVIDIA Corporation provides graphics, and compute and networking solutions. It is the dominant designer of advanced graphics processing units (GPUs) required for artificial intelligence, deep learning, and high-performance computing.",
+    "stats": [
+      { "label": "Market Cap", "value": "$2.2T" },
+      { "label": "Volume", "value": "45.8M" },
+      { "label": "P/E Ratio", "value": "74.3" },
+      { "label": "Dividend Yield", "value": "0.02%" },
+      { "label": "52-Week High", "value": "$974.00" },
+      { "label": "52-Week Low", "value": "$262.20" }
+    ]
+  }
+]
