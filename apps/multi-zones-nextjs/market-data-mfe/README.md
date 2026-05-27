@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Market Data MFE: Fintech App
 
-## Getting Started
+A micro-frontend representing the market data page in the fintech platform.
+Follows **Next.js Multi-Zones Micro-frontend Architecture** with Speculative Loading performance optimization.
 
-First, run the development server:
+## Compatibility
+
+The project is compatible with the following technology versions:
+- **Next.js**: `v16.2.5`
+- **React**: `v19.2.4`
+- **Node.js**: `v20+`   
+  This project was tested with **Node.js** `v22.17.0`.
+
+## Run Locally
+
+### Install Node Modules
+
+Navigate to the MFE folder and install necessary node modules:
+
+```bash
+  cd apps/multi-zones-nextjs/market-data-mfe
+  npm install
+```
+
+### Run without Custom Hostname, with localhost
+
+**1. Update `.env.development` file to point to the localhost shell path**
+
+```text
+NEXT_PUBLIC_SHELL_URL = http://localhost:5000
+```
+
+**2. Run the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**3. Open the MFE in the browser**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Standalone: [http://localhost:5001/market-data](http://localhost:5001/market-data)
+- Via shell (if shell is running): [http://localhost:5000/market-data](http://localhost:5000/market-data)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Run with Custom Hostname and HTTPS
 
-## Learn More
+**1. Generate local SSL Certificate**
 
-To learn more about Next.js, take a look at the following resources:
+Follow the certificate generation instructions in the [Shell README](./../shell/README.md#run-with-custom-hostname-and-https) (step 1). The generated `.certs` folder lives at `apps/multi-zones-nextjs/.certs` and is shared by all MFEs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**2. Add custom hostname**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Add this custom local hostname into your hosts file `[Windows: C:\Windows\System32\drivers\etc\hosts | Linux and macOS: /etc/hosts]`:
+```text
+127.0.0.1       market-data.local-fintech.com
+```
 
-## Deploy on Vercel
+**3. Update `.env.development` file to point to the shell custom path**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+NEXT_PUBLIC_SHELL_URL = https://shell.local-fintech.com:5000
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**4. Run the development server with HTTPS**
+
+```bash
+npm run dev:https
+```
+
+**5. Open the MFE in the browser**
+
+- Standalone: [https://market-data.local-fintech.com:5001/market-data](https://market-data.local-fintech.com:5001/market-data)
+- Via shell (if shell is running): [https://shell.local-fintech.com:5000/market-data](https://shell.local-fintech.com:5000/market-data)
