@@ -1,4 +1,4 @@
-# Portfolio MFE: Fintech App
+# Portfolio MFE: Fintech App POC
 
 A micro-frontend representing the Portfolio page in the fintech platform.
 Follows **Next.js Multi-Zones Micro-frontend Architecture** with Speculative Loading performance optimization.

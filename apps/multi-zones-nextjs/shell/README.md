@@ -1,4 +1,4 @@
-# Shell: Fintech App
+# Shell: Fintech App POC
 
 A root shell application responsible for routing and proxying independent micro-frontends in the fintech platform. It leverages **Next.js Multi-Zones micro-frontend architecture**, where each domain is served as a separate standalone application/document with independent navigation.
 

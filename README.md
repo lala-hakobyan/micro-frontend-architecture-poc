@@ -6,7 +6,7 @@ A collection of Micro-Frontend (MFE) architecture POCs designed to reflect best 
 
 ### [Next.js Multi-Zones Micro-frontend Architecture (`multi-zones-nextjs`)](./apps/multi-zones-nextjs)
 
-Fintech app that follows a Next.js Multi-Zones Micro-frontend Architecture with **Speculative Loading** performance optimization. It consists of the following projects:
+Fintech app POC that follows a Next.js Multi-Zones Micro-frontend Architecture with **Speculative Loading** performance optimization. It consists of the following projects:
 
 - [Shell](./apps/multi-zones-nextjs/shell): Used for routing and proxying micro-frontend paths. It does not have its own UI and redirects to the default Market Data platform on first load.
 - [Market Data Platform Micro-frontend](./apps/multi-zones-nextjs/market-data-mfe)

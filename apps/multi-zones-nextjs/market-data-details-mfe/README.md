@@ -1,4 +1,4 @@
-# Market Data Details MFE: Fintech App
+# Market Data Details MFE: Fintech App POC
 
 A micro-frontend representing the market data asset detail page in the fintech platform.
 Follows **Next.js Multi-Zones Micro-frontend Architecture** with Speculative Loading performance optimization.

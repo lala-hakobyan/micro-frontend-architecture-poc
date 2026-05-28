@@ -1,6 +1,6 @@
 # Next.js Multi-Zones Micro-frontend Architecture
 
-Fintech app that follows a **Next.js Multi-Zones Micro-frontend Architecture** with **Speculative Loading** performance optimization. It consists of the following projects:
+Fintech app POC that follows a **Next.js Multi-Zones Micro-frontend Architecture** with **Speculative Loading** performance optimization. It consists of the following projects:
 
 - [Shell](./shell): Used for routing and proxying micro-frontend paths. It does not own application UI and redirects to the default Market Data platform on first load.
 - [Market Data Platform Micro-frontend](./market-data-mfe)
