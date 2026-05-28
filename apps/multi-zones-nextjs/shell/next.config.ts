@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
         return {
             beforeFiles: [
                 {
+                    // `market-data-details` key is the `assetPrefix` key in the market-data-details-mfe micro-frontend
                     source: "/market-data-details/_next/:path*",
                     destination: `${NEXT_PUBLIC_MARKET_DATA_DETAILS_URL}/market-data/_next/:path*`,
                 },
@@ -42,6 +43,7 @@ const nextConfig: NextConfig = {
             ],
             afterFiles: [
                 {
+                    // `market-data` key is the `basePath` key in the market-data-details-mfe micro-frontend
                     source: "/market-data/:id+",
                     destination: `${NEXT_PUBLIC_MARKET_DATA_DETAILS_URL}/market-data/:id+`,
                 },

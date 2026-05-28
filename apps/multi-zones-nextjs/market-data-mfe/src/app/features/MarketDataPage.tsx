@@ -14,7 +14,7 @@ export default function MarketDataPage() {
                     <a
                         key={asset.id}
                         href={`${appUrl}/market-data/${asset.id}`}
-                        className="prerender-hover group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-zinc-300 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700"
+                        className="prefetch prerender-hover group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-zinc-300 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700"
                     >
                         <div className="flex flex-col">
                             <span className="text-lg font-bold text-zinc-900 dark:text-zinc-50">

@@ -27,6 +27,29 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <title>Trading MFE: Fintech App</title>
+        <script type="speculationrules"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              prerender: [
+                {
+                  where: { selector_matches: '.prerender' },
+                  eagerness: 'immediate' // "immediate" for page load or "moderate" (on hover)
+                },
+                {
+                  where: { selector_matches: '.prerender-hover' },
+                  eagerness: 'moderate' // "immediate" for page load or "moderate" (on hover)
+                }
+              ],
+              prefetch: [{
+                where: { selector_matches: '.prefetch' },
+                eagerness: 'immediate'
+              }]
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

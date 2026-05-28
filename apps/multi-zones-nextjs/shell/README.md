@@ -1,8 +1,10 @@
 # Shell: Fintech App
 
-A root shell application orchestrating independent micro-frontends in the fintech platform. It leverages **Next.js Multi-Zones micro-frontend architecture** where each domain serves as a separate document with independent navigation.
-For strict infrastructure isolation this domain acts as a pure shell orchestrating frontends and doesn't own any UI. Instead, upon load it redirects to the default MFE which is the Market Data Platform MFE.
-The separate domains like Portfolio, Market Data, Market Data Details and Trading remain strictly independent but interlink with each other and the shell to create a unified system.
+A root shell application responsible for routing and proxying independent micro-frontends in the fintech platform. It leverages **Next.js Multi-Zones micro-frontend architecture**, where each domain is served as a separate standalone application/document with independent navigation.
+
+For strict infrastructure isolation, this domain acts as a pure shell and does not own application UI. Instead, upon load, it redirects to the default MFE, which is the Market Data Platform MFE.
+
+Each micro-frontend implements **Speculative Loading** for performance optimization. Domains such as Portfolio, Market Data, Market Data Details and Trading remain strictly independent, but interlink with each other and the shell to create a unified system.
 
 ## Compatibility
 
