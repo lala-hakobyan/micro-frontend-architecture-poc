@@ -171,3 +171,18 @@ For more details about Speculative Loading, as well as front-end debugging and p
 ## How to Set up Locally
 
 To set up the project locally, please refer to the [documentation under the Shell project](./shell).
+
+## Production Considerations
+
+### The Production Reality
+Vercel automatically optimizes hard navigations between Next.js Multi-Zones. If you are building a real-world production application, you may choose to rely on their official tools:
+* **`PrefetchCrossZoneLinks`**: Automatically prefetches and prerenders cross-zone links to reduce loading wait times. Read more in the [Optimizing Hard Navigations documentation](https://vercel.com/docs/microfrontends/managing-microfrontends#optimizing-navigations-between-microfrontends).
+* **Official Template**: Vercel provides a complete, [production-ready multi-zone micro-frontend example](https://github.com/vercel-labs/microfrontends-nextjs-app-multi-zone).
+
+### The Purpose of this POC
+This project does not try to replace Vercel's official packages. Instead, it is an experiment to show exactly how the browser handles these performance boosts under the hood.
+
+By manually adding the raw Speculation Rules API, this project allows us to:
+* **Measure the real impact:** See the exact performance gains of Speculative Loading inside a Multi-Zone micro-frontend setup.
+* **Track metrics directly:** Use the `PerformanceObserver` API to calculate and compare Perceived TTFB and LCP for prerendered, prefetched, and normal resources.
+* **Take total control:** Have complete freedom to choose exactly how to load pages (for example, prefetch on load, prerender on load, or prerender on hover) instead of relying on the framework's automatic rules.

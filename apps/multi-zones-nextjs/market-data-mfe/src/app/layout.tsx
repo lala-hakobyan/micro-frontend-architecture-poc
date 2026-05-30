@@ -35,12 +35,12 @@ export default function RootLayout({
                             prerender: [
                                 {
                                     where: { selector_matches: '.prerender' },
-                                    eagerness: 'immediate' // "immediate" for page load or "moderate" (on hover)
+                                    eagerness: 'immediate', // "immediate" for page load or "moderate" (on hover)
                                 },
                                 {
                                     where: { selector_matches: '.prerender-hover' },
                                     eagerness: 'moderate' // "immediate" for page load or "moderate" (on hover)
-                                }
+                                },
                             ],
                             prefetch: [{
                                 where: { selector_matches: '.prefetch' },
