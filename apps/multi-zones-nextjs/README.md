@@ -172,6 +172,59 @@ For more details about Speculative Loading, as well as front-end debugging and p
 
 To set up the project locally, please refer to the [documentation under the Shell project](./shell).
 
+## Debugging Performance Impact
+
+Each micro-frontend comes with a `PerformanceMonitor` component that uses the `PerformanceObserver` API to log **Perceived TTFB** and **LCP** to the browser console. Together with Chrome DevTools, it lets you measure the impact of Speculative Loading on cross-zone navigation.
+
+Below are the steps:
+
+**1. Enable the Performance Monitor**
+
+The monitor is controlled by the `NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITOR` environment variable. Set it to `true` in the `.env.development` file of any MFE to measure the performance impact:
+
+```text
+NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITOR = true
+```
+
+By default, it is enabled only in `trading-mfe/.env.development`.
+
+**2. Set up Chrome DevTools**
+
+- **Network panel:** Choose **3G throttling** (or any other slow throttling) to make the performance difference easier to notice.
+- **Console panel:** Enable **Preserve log** to keep console data between hard navigations and keep the `PerformanceMonitor` output from the previous page visible across page loads.
+
+**3. Compare Baseline vs. Optimization (Trading example)**
+
+The Trading link in the Market Data MFE header carries a `prerender` class, which lets the browser prerender the Trading document while the user is still on the Market Data page (`market-data-mfe/src/app/layout/Header.tsx`):
+
+```tsx
+<a href={`${appUrl}/trading`} className="prerender ...">
+    Trading
+</a>
+```
+
+- **Baseline (no prerender):**
+
+    - Remove the `prerender` class from the Trading link.
+    - Open the Market Data page and clear the cache.
+    - Click **Trading**.
+
+  **Result:** the navigation feels slow, TTFB is a positive number, and LCP is around **~5s**.
+
+- **Optimization (with prerender):**
+
+    - Restore the `prerender` class on the Trading link.
+    - Open the Market Data page and clear the cache.
+    - Click **Trading**.
+
+  **Result:** the navigation is almost instant, TTFB is logged as **0ms** (the document is activated from the prerender cache), and LCP drops to **under 1s**, roughly a **5x improvement in LCP**.
+
+**4. Debug Speculation Rules**
+
+To verify which rules are active and whether prerendering actually completed, open **Chrome DevTools** > **Application** > **Background services** > **Speculative loads** section. It lists every rule defined in `layout.tsx`, the URLs each rule matched, and their current status (e.g. `Not triggered`, `Ready`, `Failure`, `Running`). This is the fastest way to confirm that a click was served from a ready prerender and that no rules silently failed.
+
+To learn more about Speculative Loading, the PerformanceObserver API, similar optimizations and front-end debugging, check out my [Front-end Debugging Tools handbook](https://github.com/lala-hakobyan/front-end-debugging-handbook).
+
 ## Production Considerations
 
 ### The Production Reality
@@ -180,7 +233,7 @@ Vercel automatically optimizes hard navigations between Next.js Multi-Zones. If 
 * **Official Template**: Vercel provides a complete, [production-ready multi-zone micro-frontend example](https://github.com/vercel-labs/microfrontends-nextjs-app-multi-zone).
 
 ### The Purpose of this POC
-This project does not try to replace Vercel's official packages. Instead, it is an experiment to show exactly how the browser handles these performance boosts under the hood.
+This project does not try to replace Vercel's official optimization techniques. Instead, it is for experimenting with raw Speculation Rules API optimization technique on pure Multi-Zones architecture.
 
 By manually adding the raw Speculation Rules API, this project allows us to:
 * **Measure the real impact:** See the exact performance gains of Speculative Loading inside a Multi-Zone micro-frontend setup.
