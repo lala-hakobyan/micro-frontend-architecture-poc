@@ -1,6 +1,6 @@
 # Next.js Multi-Zones Micro-frontend Architecture
 
-Fintech app POC that follows a **Next.js Multi-Zones Micro-frontend Architecture** with **Speculative Loading** performance optimization. It consists of the following projects:
+Fintech app starter project that follows a **Next.js Multi-Zones Micro-frontend Architecture** with **Speculative Loading** performance optimization. It consists of the following projects:
 
 - [Shell](./shell): Used for routing and proxying micro-frontend paths. It does not own application UI and redirects to the default Market Data platform on first load.
 - [Market Data Platform Micro-frontend](./market-data-mfe)
@@ -227,15 +227,15 @@ To learn more about Speculative Loading, the PerformanceObserver API, similar op
 
 ## Production Considerations
 
-### The Production Reality
-Vercel automatically optimizes hard navigations between Next.js Multi-Zones. If you are building a real-world production application, you may choose to rely on their official tools:
+### Framework Defaults vs. Native Implementation
+Vercel automatically optimizes hard navigations between Next.js Multi-Zones. If you are building a standard production application you may choose to rely on their abstracted tools:
 * **`PrefetchCrossZoneLinks`**: Automatically prefetches and prerenders cross-zone links to reduce loading wait times. Read more in the [Optimizing Hard Navigations documentation](https://vercel.com/docs/microfrontends/managing-microfrontends#optimizing-navigations-between-microfrontends).
-* **Official Template**: Vercel provides a complete, [production-ready multi-zone micro-frontend example](https://github.com/vercel-labs/microfrontends-nextjs-app-multi-zone).
+* **Official Template**: Vercel provides a baseline [multi-zone micro-frontend example](https://github.com/vercel-labs/microfrontends-nextjs-app-multi-zone).
 
-### The Purpose of this POC
-This project does not try to replace Vercel's official optimization techniques. Instead, it is for experimenting with raw Speculation Rules API optimization technique on pure Multi-Zones architecture.
+### Custom Implementation and Flexibility
+While standard solutions provide an excellent baseline, this project implements a custom optimization layer using the raw Speculation Rules API within a pure Multi-Zones environment.
 
-By manually adding the raw Speculation Rules API, this project allows us to:
-* **Measure the real impact:** See the exact performance gains of Speculative Loading inside a Multi-Zone micro-frontend setup.
-* **Track metrics directly:** Use the `PerformanceObserver` API to calculate and compare Perceived TTFB and LCP for prerendered, prefetched, and normal resources.
-* **Take total control:** Have complete freedom to choose exactly how to load pages (for example, prefetch on load, prerender on load, or prerender on hover) instead of relying on the framework's automatic rules.
+By building a custom implementation this architecture provides the flexibility to:
+* **Measure raw optimizations:** Quantify the exact performance gains of Speculative Loading inside a distributed micro-frontend setup.
+* **Track metrics directly:** Utilize the `PerformanceObserver` API to calculate and compare Perceived TTFB and LCP for prerendered, prefetched and normal resources.
+* **Apply flexible rules:** Maintain complete freedom to define granular resource loading strategies (e.g. prefetch on load, prerender on load or prerender on hover) tailored to specific user journeys.

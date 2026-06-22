@@ -1,4 +1,4 @@
-# Trading MFE: Fintech App POC
+# Trading MFE: Fintech App Starter Project
 
 A micro-frontend representing the Trading page in the fintech platform.
 Follows **Next.js Multi-Zones Micro-frontend Architecture** with Speculative Loading performance optimization.

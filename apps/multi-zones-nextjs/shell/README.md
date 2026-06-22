@@ -1,4 +1,4 @@
-# Shell: Fintech App POC
+# Shell: Fintech App Starter Project
 
 A root shell application responsible for routing and proxying independent micro-frontends in the fintech platform. It leverages **Next.js Multi-Zones micro-frontend architecture**, where each domain is served as a separate standalone application/document with independent navigation.
 
@@ -90,7 +90,7 @@ NEXT_PUBLIC_SHELL_URL = http://localhost:5000
 - **Instructions for Windows:**
     - Run **Powershell** as administrator
     - Install **mkcert** program: `choco install mkcert`
-    - Go to specific **multi-zones-nextjs** project physical folder: `cd C:\GIT\PERSONAL\micro-frontend-architecture-poc\apps\multi-zones-nextjs`
+    - Go to specific **multi-zones-nextjs** project physical folder: `cd C:\GIT\PERSONAL\micro-frontend-architecture\apps\multi-zones-nextjs`
     - Create `.certs` folder to store certificates: `mkdir .certs`
     - Generate certificates:
       ```text
@@ -105,7 +105,7 @@ NEXT_PUBLIC_SHELL_URL = http://localhost:5000
     - Install **mkcert** (and nss tools for Firefox support):
         - *MacOS:* `brew install mkcert nss`
         - *Linux (Ubuntu/Debian):* `sudo apt update && sudo apt install mkcert libnss3-tools`
-    - Go to specific **multi-zones-nextjs** project physical folder: `cd ~/GIT/PERSONAL/micro-frontend-architecture-poc/apps/multi-zones-nextjs`
+    - Go to specific **multi-zones-nextjs** project physical folder: `cd ~/GIT/PERSONAL/micro-frontend-architecture/apps/multi-zones-nextjs`
     - Create `.certs` folder to store certificates: `mkdir -p .certs`
     - Generate certificates:
       ```bash
@@ -115,7 +115,7 @@ NEXT_PUBLIC_SHELL_URL = http://localhost:5000
     - Copy this master certificate into your project so Next.js can trust the local HTTPS proxy connections between your micro-frontends:  
       `cp "$(mkcert -CAROOT)/rootCA.pem" .certs/rootCA.pem`
 
-After these installation steps, you should see `.certs` folder under `micro-frontend-architecture-poc\apps\multi-zones-nextjs` path with the certificates:
+After these installation steps, you should see `.certs` folder under `micro-frontend-architecture\apps\multi-zones-nextjs` path with the certificates:
 
 ```text
 local-fintech-cert.pem

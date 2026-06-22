@@ -1,4 +1,4 @@
-# Market Data MFE: Fintech App POC
+# Market Data MFE: Fintech App Starter Project
 
 A micro-frontend representing the market data page in the fintech platform.
 Follows **Next.js Multi-Zones Micro-frontend Architecture** with Speculative Loading performance optimization.

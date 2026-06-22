@@ -1,12 +1,12 @@
-# Micro-frontend Architecture POC Projects
+# Micro-frontend Architecture Starter Projects
 
-A collection of Micro-Frontend (MFE) architecture POCs designed to reflect best practices in distributed front-end systems. Intended for experimenting with orchestration patterns such as **Next.js Multi-Zones**, **Module Federation** and **Native Federation**, benchmarking cross-app performance and creating scalable foundations for real production apps.
+A collection of Micro-Frontend (MFE) architecture starter projects designed to reflect best practices in distributed front-end systems. The projects are intended for experimenting with orchestration patterns such as Next.js Multi-Zones, Module Federation and Native Federation, benchmarking cross-app performance and creating scalable architecture foundations for real production apps.
 
 ## Projects
 
 ### [Next.js Multi-Zones Micro-frontend Architecture (`multi-zones-nextjs`)](./apps/multi-zones-nextjs)
 
-Fintech app POC that follows a Next.js Multi-Zones Micro-frontend Architecture with **Speculative Loading** performance optimization. It consists of the following projects:
+Fintech app starter project that follows a Next.js Multi-Zones Micro-frontend Architecture with **Speculative Loading** performance optimization. It consists of the following projects:
 
 - [Shell](./apps/multi-zones-nextjs/shell): Used for routing and proxying micro-frontend paths. It does not have its own UI and redirects to the default Market Data platform on first load.
 - [Market Data Platform Micro-frontend](./apps/multi-zones-nextjs/market-data-mfe)
@@ -24,7 +24,7 @@ This project is released under the [MIT License](./LICENSE).
 - **Usage:** You are welcome to clone and fork this repository for experimenting.
 - **Credit:** If you share or publish your own version, please retain the original license and give appropriate credit to [Lala Hakobyan](https://github.com/lala-hakobyan) or link back to the original repository.
 - **Contributions:** I am not accepting pull requests for this project at this time.
-- **Feedback:** If you found a bug, have a feedback or question, please feel free to reach out via [LinkedIn](https://www.linkedin.com/in/lala-hakobyan) or submit an issue on the [**Issues page**](https://github.com/lala-hakobyan/micro-frontend-architecture-poc/issues) on GitHub.
+- **Feedback:** If you found a bug, have a feedback or question, please feel free to reach out via [LinkedIn](https://www.linkedin.com/in/lala-hakobyan) or submit an issue on the [**Issues page**](https://github.com/lala-hakobyan/micro-frontend-architecture/issues) on GitHub.
 
 # Author
 **Name:** Lala Hakobyan  
