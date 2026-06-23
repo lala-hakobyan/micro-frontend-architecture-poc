@@ -1,6 +1,6 @@
 # Micro-frontend Architecture Starter Projects
 
-A collection of Micro-Frontend (MFE) architecture starter projects designed to reflect best practices in distributed front-end systems. The projects are intended for experimenting with orchestration patterns such as Next.js Multi-Zones, Module Federation and Native Federation, benchmarking cross-app performance and creating scalable architecture foundations for real production apps.
+A collection of Micro-Frontend (MFE) architecture starter projects designed to reflect best practices in distributed front-end systems. The projects are intended for covering orchestration patterns such as **Next.js Multi-Zones**, **Module Federation** and **Native Federation**, benchmarking cross-app performance and creating scalable architecture foundations for real production apps.
 
 ## Projects
 
